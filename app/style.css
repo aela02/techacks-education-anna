@@ -1,0 +1,330 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #73B4D1;
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  font-style: ;
+  color: #373fff;
+}
+
+h1 {
+  font-family: "Sora", sans-serif;
+  /* how much can you specify colors? "lime" worked, is there a list of all the color words you can use before needing hex codes? */
+  color: white;
+}
+
+h3 {
+  font-family: "Lato", sans-serif;
+}
+
+p,
+h4,
+h6 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+}
+
+.intro {
+  padding: 30px;
+}
+
+
+/* NAV BAR */
+ul {
+  list-style-type: none;
+  padding: 1em;
+  background-color: #003046;
+  overflow: hidden;
+}
+
+li {
+  display: inline;
+  border-right: 2px solid white;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 1em;
+  font-size: 1.3em;
+}
+
+li a:hover {
+  background-color: #43D6B9;
+}
+
+/* chat box */
+ {
+  box-sizing: border-box;
+}
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+.form-container textarea {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: red;
+}
+
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
+
+/* COMM */
+.emojis{
+  /*text-align: center;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 0px;
+}
+.feedback {
+  display: flex;
+  flex-direction: column;
+}
+.communication {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  padding: 20px
+}
+
+/*BOOK PAGE*/
+.books{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 40px
+}
+.title{
+  padding: 20px;
+  border: groove;
+  margin: 20px;
+  width: 600px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+.title h1{
+  color: black
+}
+
+.patatap{
+  display: flex;
+  justify-content: center;
+}
+
+/*GAME PAGE*/
+.testing {
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.math, .reading{
+  margin: 10px;
+  padding: 10px;
+  border-style: solid
+}
+
+.math-ex, .reading-ex {
+  margin: 20px;
+}
+
+/*img:hover {
+  opacity: 0.5;
+  text: display;
+} */
+
+.math-cat,
+.reading-cat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.math,
+.reading {
+  text-align: center;
+}
+
+.math-ex {
+  position: relative;
+  padding: 0;
+ /* width: 300px; */
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.reading-ex {
+  position: relative;
+  padding: 0;
+ /* width: 300px; */
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.content {
+  opacity: 0;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #1c87c9;
+  background-color: rgba(200, 200, 200, 0.5);
+  /*width: 300px; */
+  height: 300px;
+  -webkit-transition: all 400ms ease-out;
+  -moz-transition: all 400ms ease-out;
+  -o-transition: all 400ms ease-out;
+  -ms-transition: all 400ms ease-out;
+  transition: all 400ms ease-out;
+  text-align: center;
+}
+
+.math-ex .content:hover {
+  opacity: 1;
+}
+
+.math-ex .content .text-measure {
+  height: 0;
+  opacity: 1;
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+}
+
+.math-ex .content:hover .text-measure {
+  opacity: 1;
+  transform: translateY(150px);
+  -webkit-transform: translateY(150px);
+}
+
+.reading-ex .content:hover {
+  opacity: 1;
+}
+
+.reading-ex .content .text-a4bl {
+  height: 0;
+  opacity: 1;
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+}
+
+.reading-ex .content:hover .text-a4bl {
+  opacity: 1;
+  transform: translateY(150px);
+  -webkit-transform: translateY(150px);
+}
+
+.math-ex,
+.reading-ex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.math, .reading{
+  padding: 20px;
+  border: groove;
+  margin: 20px;
+  width: 370px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+.math, .reading h3{
+  color: black
+}
+
+
+.footer {
+  color: white;
+  background-color: white;
+  border: solid;
+  border-color: #003046;
+  margin: 0px;
+  width: 120px;
+  padding: 10px;
+}
+.footer a{
+  text-decoration: none;
+  color: black;
+}
+
+.intro a{
+  text-decoration: none;
+  color: blue;
+}
